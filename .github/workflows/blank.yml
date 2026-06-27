@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaCupom - Descontos em Estética com Segurança</title>
+    <!-- Tailwind CSS para design ágil e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts para tipografia elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para ícones premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf6f4',
+                            100: '#fbece7',
+                            200: '#f7d8cd',
+                            300: '#efbba8',
+                            400: '#e1947b',
+                            500: '#d06f52',
+                            600: '#be5439',
+                            700: '#9e422c',
+                            800: '#813726',
+                            900: '#6c3124',
+                        },
+                        accent: {
+                            50: '#faf9f6',
+                            100: '#f5f2eb',
+                            200: '#e5decb',
+                            300: '#ccbe9f',
+                            400: '#ae996e',
+                            500: '#947d51',
+                            600: '#7e6740',
+                            700: '#645032',
+                            800: '#52412b',
+                            900: '#443725',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d06f52;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
+
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-brand-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo BellaCupom -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="p-2.5 bg-brand-500 text-white rounded-2xl shadow-lg shadow-brand-500/20 flex items-center justify-center">
+                    <i class="fa-solid fa-sparkles text-xl"></i>
+                </span>
+                <div>
+                    <span class="text-2xl font-extrabold text-slate-900 tracking-tight font-serif">Bella<span class="text-brand-500 font-sans">Cupom</span></span>
+                    <span class="block text-[10px] text-slate-500 font-semibold tracking-wider uppercase">Estética com Inteligência</span>
+                </div>
+            </a>
+
+            <!-- Localização atual simulada -->
+            <div class="hidden md:flex items-center space-x-2 px-4 py-2 bg-slate-100 rounded-full text-slate-700 text-sm">
+                <i class="fa-solid fa-location-dot text-brand-500"></i>
+                <span class="font-medium">São Paulo, SP</span>
+                <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+            </div>
+
+            <!-- Botão de Segurança -->
+            <div class="flex items-center space-x-3">
+                <a href="#seguranca-calculator" class="hidden sm:inline-flex items-center space-x-2 bg-accent-100 text-accent-800 hover:bg-accent-200 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors">
+                    <i class="fa-solid fa-shield-check text-brand-500"></i>
+                    <span>Calculadora de Segurança</span>
+                </a>
+                <button onclick="toggleFaqModal()" class="p-2.5 text-slate-500 hover:text-brand-500 transition-colors">
+                    <i class="fa-regular fa-circle-question text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-brand-50 via-white to-slate-50 py-12 md:py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-100/30 via-transparent to-transparent opacity-70"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Lado Esquerdo: Conteúdo Motivacional -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-brand-100 text-brand-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>Descontos de até 75% OFF em clínicas Premium</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                            Realce sua beleza de forma <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-accent-600 font-serif italic font-normal">acessível</span> e segura.
+                        </h1>
