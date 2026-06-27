@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AceleraLead - Captação de Clientes de Alta Performance</title>
+    <title>Clínica de Estética Descontos | Tratamentos Premium com Preços Exclusivos</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -17,17 +19,25 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#22c55e', // Emerald Accent
-                            600: '#16a34a',
-                            700: '#15803d',
-                            indigo: '#4f46e5', // Royal Indigo
-                            dark: '#0f172a', // Slate Dark
-                            card: '#1e293b'
+                        aesthetic: {
+                            50: '#fffbf9',
+                            100: '#fdf3f0',
+                            200: '#fbe7e2',
+                            300: '#f5cdcb',
+                            400: '#eaa4a4',
+                            500: '#da7b7f',
+                            600: '#c55860',
+                            700: '#a63e48',
+                            800: '#8a333f',
+                            900: '#732d39',
+                        },
+                        gold: {
+                            100: '#fbf7e9',
+                            500: '#d4af37',
+                            600: '#aa8c2c',
                         }
                     }
                 }
@@ -35,6 +45,39 @@
         }
     </script>
     <style>
-        .gradient-bg {
-            background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.15) 0%, rgba(15, 23, 42, 0) 50%),
-                        radial-gradient(
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(218, 123, 127, 0.15);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #fffbf9 0%, #fbe7e2 100%);
+        }
+    </style>
+</head>
+<body class="bg-aesthetic-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Top Promo Bar -->
+    <div class="bg-aesthetic-600 text-white text-center py-2 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <i class="fa-solid fa-sparkles mr-2 animate-pulse"></i> 
+        PROMOÇÃO DE INVERNO: Cupom de até 70% OFF disponível apenas hoje! 
+        <span id="countdown" class="font-bold underline ml-1">00:00:00</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-aesthetic-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="p-2 bg-aesthetic-100 rounded-full text-aesthetic-600">
+                    <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                </span>
+                <div>
+                    <span class="block font-serif text-xl md:text-2xl font-bold tracking-tight text-aesthetic-800">Estética<span class="text-aesthetic-500">Descontos</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest text-gray-400 font-semibold -mt-1">Clube de Benefícios</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a href="#procedimentos" class="hover:text-aesthetic-600 transition-colors">Procedimentos</a>
+                <a href="#como-funciona" class="hover:text-aesthetic-600 transition-colors">Como Funciona</a>
+                <a href="#calculadora" class
